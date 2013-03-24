@@ -95,8 +95,7 @@ public class AtomLink extends CommonAttributes {
      * @param href {@link #href}
      */
     public AtomLink(String rel, URI href) {
-        this.rel = rel;
-        this.href = href;
+        this(rel, href, null);
     }
 
     /**
@@ -104,8 +103,18 @@ public class AtomLink extends CommonAttributes {
      * @param href {@link #href}
      */
     public AtomLink(String rel, String href) {
+        this(rel, URI.create(href), null);
+    }
+
+    /**
+     * @param rel {@link #rel}
+     * @param href {@link #href}
+     * @param type {@link #type}
+     */
+    public AtomLink(String rel, URI href, String type) {
         this.rel = rel;
-        this.href = URI.create(href);
+        this.href = href;
+        this.type = type;
     }
 
 

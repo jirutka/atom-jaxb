@@ -125,9 +125,22 @@ public abstract class AtomSource extends CommonAttributes {
         this.authors.add(author);
     }
 
+    /** @param name author's name */
+    public void addAuthor(String name) {
+        this.authors.add(new AtomPerson(name));
+    }
+
     /** @param link {@link #links} */
     public void addLink(AtomLink link) {
         links.add(link);
+    }
+
+    /**
+     * @param rel {@link AtomLink#rel}
+     * @param href {@link AtomLink#href}
+     */
+    public void addLink(String rel, URI href) {
+        links.add(new AtomLink(rel, href));
     }
 
 
