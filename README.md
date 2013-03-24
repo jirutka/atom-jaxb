@@ -11,7 +11,7 @@ Maven
 <dependency>
     <groupId>cz.jirutka.atom</groupId>
     <artifactId>atom-jaxb</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 </dependency>
 
 <repository>
