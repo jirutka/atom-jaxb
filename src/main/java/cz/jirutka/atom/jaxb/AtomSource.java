@@ -55,7 +55,7 @@ public abstract class AtomSource extends CommonAttributes {
      */
     @XmlElement(name = "author", namespace = ATOM_NS)
     @XmlSchemaType(name = "atomAuthor")
-    private ArrayList<AtomPerson> authors = new ArrayList<AtomPerson>();
+    private List<AtomPerson> authors = new ArrayList<AtomPerson>();
 
     /**
      * The "atom:id" element conveys a permanent, universally unique identifier
@@ -134,10 +134,10 @@ public abstract class AtomSource extends CommonAttributes {
     ////////  Accessors  ////////
 
     /** @return {@link #authors} */
-    public ArrayList<AtomPerson> getAuthors() { return authors; }
+    public List<AtomPerson> getAuthors() { return authors; }
 
     /** @param authors {@link #authors} */
-    public void setAuthors(ArrayList<AtomPerson> authors) { this.authors = authors; }
+    public void setAuthors(List<AtomPerson> authors) { this.authors = authors; }
 
     /** @return {@link #id} */
     public String getId() { return id; }
