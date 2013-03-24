@@ -44,7 +44,8 @@ import static cz.jirutka.atom.jaxb.Namespaces.ATOM_NS;
  * @see <a href="http://tools.ietf.org/html/rfc4287#page-24">RFC 4287, Page 24</a>
  * @author Jakub Jirutka <jakub@jirutka.cz>
  */
-@XmlType(name = "atomSource")
+@XmlType(name = "atomSource",
+         propOrder = {"title", "id", "updated", "authors", "links"})
 public abstract class AtomSource extends CommonAttributes {
 
     /**

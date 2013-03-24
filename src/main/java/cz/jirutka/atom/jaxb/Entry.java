@@ -49,7 +49,8 @@ import static cz.jirutka.atom.jaxb.Namespaces.ATOM_NS;
  * @author Jakub Jirutka <jakub@jirutka.cz>
  */
 @XmlRootElement(namespace = ATOM_NS)
-@XmlType(name = "atomEntry")
+@XmlType(name = "atomEntry",
+         propOrder = {"published", "summary", "content"})
 public class Entry <T> extends AtomSource {
     
     /**

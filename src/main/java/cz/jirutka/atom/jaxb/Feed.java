@@ -57,7 +57,8 @@ import static cz.jirutka.atom.jaxb.Namespaces.OPENSEARCH_NS;
  * @author Jakub Jirutka <jakub@jirutka.cz>
  */
 @XmlRootElement(namespace = ATOM_NS)
-@XmlType(name = "atomFeed")
+@XmlType(name = "atomFeed",
+         propOrder = {"entries", "startIndex", "itemsPerPage", "totalResults"})
 public class Feed <T> extends AtomSource {
 
     /**
